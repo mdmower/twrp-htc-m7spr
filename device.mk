@@ -3,11 +3,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 # The gps config appropriate for this device
 $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
-$(call inherit-product-if-exists, vendor/htc/m7spr/m7spr-vendor.mk)
+$(call inherit-product-if-exists, vendor/htc/m7wls/m7wls-vendor.mk)
 
-DEVICE_PACKAGE_OVERLAYS += device/htc/m7spr/overlay
+DEVICE_PACKAGE_OVERLAYS += device/htc/m7wls/overlay
 
-LOCAL_PATH := device/htc/m7spr
+LOCAL_PATH := device/htc/m7wls
 ifeq ($(TARGET_PREBUILT_KERNEL),)
         LOCAL_KERNEL := $(LOCAL_PATH)/kernel
 else
@@ -32,5 +32,5 @@ PRODUCT_COPY_FILES += \
 $(call inherit-product, build/target/product/full.mk)
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
-PRODUCT_NAME := full_m7spr
-PRODUCT_DEVICE := m7spr
+PRODUCT_NAME := full_m7wls
+PRODUCT_DEVICE := m7wls
